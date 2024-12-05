@@ -11,9 +11,9 @@ db_tables = {
 
 def get_db_connection(database:str):
     conn = psycopg2.connect(
-            host="localhost",
-            database=database,
-            user='postgres',
+            host="172.21.24.242",   #da cambiare ogni volta
+            database=database,      #con "ip addr show"
+            user='postgres',        #172.21.24.242
             password='postgres',
             port='5432'
             )
@@ -54,4 +54,4 @@ def index():
 
 
 if __name__ == '__main__':
-    api.run(host="127.0.0.1", port=4160)
+    api.run(host="0.0.0.0", port=4160)
